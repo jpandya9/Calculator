@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0)
+}
+
+/* changed font family to show a clear change on browser */
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(225, 245, 240)
+}
+
+/* removed all padding and margin to make sure the background fills out entire screen. Made background linear-gradient(to right) so that first colour = left and second = right. */
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* ^ this makes sure everything on the screen is centered (20-21). The height is so that it knows to fill 100% of the height all the time (22). To make the input number as long as wanted, we need a minmax value but only for the top. */
+
+.operation-buttons {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgb(177, 212, 217);
+    color: rgb(0, 31, 48);
+    border: 1px solid rgb(170, 140, 119);
+    outline: none;
+}
+
+.number-buttons {
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(48, 18, 0);
+    border: 1px solid rgb(170, 140, 119);
+    outline: none;
+    background-color: rgb(220, 186, 165);
+}
+
+.span-two {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgb(177, 212, 217);
+    color: rgb(48, 18, 0);
+    border: 1px solid rgb(170, 140, 119);
+    outline: none;
+    grid-column: span 2;
+}
+
+.span-two:hover,
+.calculator-grid>.operation-buttons:hover {
+    background-color: rgb(58, 24, 0);
+    color: #e4c0ab;
+}
+
+.calculator-grid>.number-buttons:hover {
+    background-color: rgb(0, 31, 48);
+    color: rgba(182, 226, 232, 0.9);
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(238, 227, 219);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 1px solid rgb(170, 140, 119);
+}
+
+.output .previous-operand {
+    color: rgba(71, 27, 0, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: rgb(71, 27, 0);
+    font-size: 2.5rem;
+}

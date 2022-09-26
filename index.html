@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete class="operation-buttons">DEL</button>
+        <button data-operation class="operation-buttons">÷</button>
+        <button data-number class="number-buttons">1</button>
+        <button data-number class="number-buttons">2</button>
+        <button data-number class="number-buttons">3</button>
+        <button data-operation class="operation-buttons">*</button>
+        <button data-number class="number-buttons">4</button>
+        <button data-number class="number-buttons">5</button>
+        <button data-number class="number-buttons">6</button>
+        <button data-operation class="operation-buttons">+</button>
+        <button data-number class="number-buttons">7</button>
+        <button data-number class="number-buttons">8</button>
+        <button data-number class="number-buttons">9</button>
+        <button data-operation class="operation-buttons">-</button>
+        <button data-number class="number-buttons">.</button>
+        <!--This works just like a number in the context of the calculator, so we call it a number-operation.-->
+        <button data-number class="number-buttons">0</button>
+        <button data-equals class="span-two">=</button>
+    </div>
+</body>
+
+</html>
